@@ -1,0 +1,12 @@
+<h1>Remove Item</h1>
+
+<p>
+  Are you sure you want to remove <%= @item.name %>?
+</p>
+
+<form action="/destroy" method="post">
+  <input type="hidden" name="id" value="<%= @item.id %>">
+  <input type="submit" value="Remove">
+</form>
+<br>
+<a href="/">BACK</a>

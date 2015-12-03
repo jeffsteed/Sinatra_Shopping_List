@@ -1,0 +1,6 @@
+<h1>Items</h1>
+
+<% @items.each do |item| %>
+  <h3><%= item.name %> - <%= item.qty %>          <small><a href="/update/<%= item.id %>">Update</a>    <a href="/destroy/<%= item.id %>">Remove</a></small></h3>
+<% end %>
+<a href="/create">Add Item</a>

@@ -1,1 +1,10 @@
 <h1>Login</h1>
+
+<%= @message %>
+
+<form action="/login" method="post">
+  <input type="text" name="user_name" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Login">
+  <input type="button" onclick="window.location.href='/'" value="Cancel">
+</form>

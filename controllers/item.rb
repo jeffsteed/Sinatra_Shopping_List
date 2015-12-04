@@ -2,7 +2,11 @@ class ItemController < ApplicationController
 
   get "/" do
     @items = Item.all
-    erb :read_items
+    if authorization_check
+      erb :read_items
+    else
+      erb :not_authorized
+    end
   end
 
   get "/create" do

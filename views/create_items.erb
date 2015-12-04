@@ -1,9 +1,8 @@
 <h1>Create Item</h1>
-
+<input type="button" onclick="window.location.href='/logout'" value="Logout"><br><br>
 <form action="/create" method="post">
   <input type="text" name="name" placeholder="Name">
   <input type="text" name="qty" placeholder="Quantity">
   <input type="submit" value="Add Item">
+  <input type="button" onclick="window.location.href='/items'" value="Cancel">
 </form>
-<br>
-<a href="/">BACK</a>

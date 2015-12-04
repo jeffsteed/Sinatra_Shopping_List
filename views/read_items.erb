@@ -1,6 +1,54 @@
-<h1>Items</h1>
+<input type="button" onclick="window.location.href='/logout'" value="Logout"><h1 id="items_head">Items</h1>
 
-<% @items.each do |item| %>
-  <h3><%= item.name %> - <%= item.qty %>          <small><a href="/update/<%= item.id %>">Update</a>    <a href="/destroy/<%= item.id %>">Remove</a></small></h3>
-<% end %>
-<a href="/create">Add Item</a>
+
+<table>
+
+  <thead>
+    <tr>
+      <th>
+        Item
+      </th>
+      <th>
+        Quantity
+      </th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @items.each do |item| %>
+
+      <tr>
+        <td scope="col">
+          <%= item.name %>
+        </td>
+        <td scope="col" class="qty">
+          <%= item.qty %>
+        </td>
+        <td>
+          <input type="button" onclick="window.location.href='items/update/<%= item.id %>'" value="Update">
+        </td>
+        <td>
+          <input type="button" onclick="window.location.href='items/destroy/<%= item.id %>'" value="Remove">
+        </td>
+      </tr>
+
+    <% end %>
+
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="4">
+
+      </td>
+    </tr>
+  </tfoot>
+
+</table>
+<br>
+
+<input type="button" id="add_anchor" onclick="window.location.href='/items/create'" value="Add Item">
+<input type="button" onclick="window.location.href='/'" value="Home">

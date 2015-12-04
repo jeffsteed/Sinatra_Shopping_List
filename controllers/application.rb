@@ -15,4 +15,26 @@ class ApplicationController < Sinatra::Base
     erb :page_not_found
   end
 
+  enable :sessions
+
+  # Method to check if a user already exists
+  def does_user_exist(username)
+    user = Account.find_by(:user_name => username)
+    if user
+      return true
+    else
+      return false
+    end
+  end
+
+  #Is the user already logged in
+  def authorization_check()
+    if session[:current_user] == nil
+      return false
+      redirect "/not_authorized"
+    else
+      return true
+    end
+  end
+
 end

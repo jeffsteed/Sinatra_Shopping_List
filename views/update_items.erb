@@ -1,10 +1,18 @@
-<h1>Update</h1>
-<input type="button" onclick="window.location.href='/logout'" value="Logout"><br><br>
+<input type="button" class="logoutbtn" onclick="window.location.href='/logout'" value="Logout"><br><br>
+<h1 class="headmsg" id="items_head">Update</h1>
 
-<form action="/update" method="post">
-  <input type="hidden" name="id" value="<%= @item.id %>">
-  <input type="text" name="name" value="<%= @item.name %>">
-  <input type="text" name="qty" value="<%= @item.qty %>">
-  <input type="submit" value="Update Item">
-  <input type="button" onclick="window.location.href='/items'" value="Cancel">
+<form action="/update" class="forms" method="post">
+  <div class="form-field">
+    <input type="hidden" name="id" value="<%= @item.id %>">
+  </div>
+  <div class="form-field">
+    <input type="text" name="name" value="<%= @item.name %>">
+  </div>
+  <div class="form-field">
+    <input type="text" name="qty" value="<%= @item.qty %>">
+  </div>
+  <div class="form-field">
+    <input type="submit" id="loginbtn" value="Update Item">
+    <input type="button" class="cancelbtn" onclick="window.location.href='/items'" value="Cancel">
+  </div>
 </form>

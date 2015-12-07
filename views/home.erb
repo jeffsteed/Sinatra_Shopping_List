@@ -1,8 +1,10 @@
-<h1>Welcome to your Sinatra Shopping List!</h1>
-<h2>Let Ol' Blue Eyes help you fill your cart.</h2>
 
-<h3><%= @message %></h3>
+<div style="background: rgba(0, 0, 0, 0.3); padding: 6px; width: 640px; border-radius: 4px;">
+  <h2 class="homemsg" style="color:white">Welcome to your Sinatra Shopping List!</h2>
+  <h3 class="homemsg" style="color:white">Let Ol' Blue Eyes help you fill your cart.</h3>
+  <h3><%= @message %></h3>
 
-<input type="button" onclick="window.location.href='/login'" value="Login">
-<input type="button" onclick="window.location.href='/items'" value="Items">
-<input type="button" onclick="window.location.href='/logout'" value="Logout">
+  <input type="button" id="loginbtn" onclick="window.location.href='/login'" value="Login">
+  <input type="button" id="itemsbtn" onclick="window.location.href='/items'" value="Items">
+  <input type="button" class="logoutbtn" onclick="window.location.href='/logout'" value="Logout">
+</div>

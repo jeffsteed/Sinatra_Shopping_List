@@ -1,10 +1,18 @@
-<h1>Login</h1>
+<input type="button" style="background-color: cyan; float: right;" onclick="window.location.href='/register'" value="Register">
 
-<%= @message %>
-
-<form action="/login" method="post">
-  <input type="text" name="user_name" placeholder="Username">
-  <input type="password" name="password" placeholder="Password">
-  <input type="submit" value="Login">
-  <input type="button" onclick="window.location.href='/'" value="Cancel">
+<form action="/login" class="forms" method="post">
+  <h1 id="items_head">Login</h1>
+  <div class="form-field invalid">
+    <%= @message %>
+  </div>
+  <div class="form-field">
+    <input type="text" name="user_name" placeholder="Username">
+  </div>
+  <div class="form-field">
+    <input type="password" name="password" placeholder="Password">
+  </div>
+  <div class="form-field">
+    <input type="submit" id="loginbtn" value="Login">
+    <input type="button" class="cancelbtn" onclick="window.location.href='/'" value="Cancel">
+  </div>
 </form>

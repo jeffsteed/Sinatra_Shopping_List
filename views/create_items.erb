@@ -1,8 +1,15 @@
-<h1>Create Item</h1>
-<input type="button" onclick="window.location.href='/logout'" value="Logout"><br><br>
-<form action="/create" method="post">
-  <input type="text" name="name" placeholder="Name">
-  <input type="text" name="qty" placeholder="Quantity">
-  <input type="submit" value="Add Item">
-  <input type="button" onclick="window.location.href='/items'" value="Cancel">
+<input type="button" class="logoutbtn" onclick="window.location.href='/logout'" value="Logout">
+<h1 id="items_head">Create Item</h1>
+<form action="/create" class="forms" method="post">
+  <div class="form-field">
+    <input type="text" name="name" placeholder="Name">
+  </div>
+  <div class="form-field">
+    <input type="text" name="qty" placeholder="Quantity">
+  </div>
+  <div class="form-field">
+    <input type="submit" id="add_anchor" value="Add Item">
+    <input type="button" class="cancelbtn" onclick="window.location.href='/items'" value="Cancel">
+  </div>
+
 </form>

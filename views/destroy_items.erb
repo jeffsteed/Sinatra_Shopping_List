@@ -1,11 +1,13 @@
-<h1>Remove Item</h1>
-<input type="button" onclick="window.location.href='/logout'" value="Logout"><br>
-<p>
-  Are you sure you want to remove <%= @item.name %>?
-</p>
+<input type="button" class="logoutbtn" onclick="window.location.href='/logout'" value="Logout">
+<div class="headmsg">
+  <h1 id="items_head">Remove Item</h1>
+  <p style="color:white">
+    Are you sure you want to remove <%= @item.name %>?
+  </p>
 
-<form action="/destroy" method="post">
-  <input type="hidden" name="id" value="<%= @item.id %>">
-  <input type="submit" value="Remove">
-  <input type="button" onclick="window.location.href='/items'" value="Cancel">
-</form>
+  <form action="/destroy" method="post">
+    <input type="hidden" name="id" value="<%= @item.id %>">
+    <input type="submit" id="loginbtn" value="Remove">
+    <input type="button" class="cancelbtn" onclick="window.location.href='/items'" value="Cancel">
+  </form>
+</div>

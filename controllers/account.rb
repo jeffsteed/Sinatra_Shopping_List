@@ -35,7 +35,7 @@ class AccountController < ApplicationController
     if does_user_exist(params[:user_name])
       user = Account.authenticate(params[:user_name], params[:password])
     else
-      @message = "Your password or username is incorrect."
+      @message = "Invalid username or password"
       erb :login
     end
     if user
@@ -43,7 +43,7 @@ class AccountController < ApplicationController
       @message = "Welcome back, " + params[:user_name]
       erb :home
     else
-      @message = "Your password or username is incorrect."
+      @message = "Invalid username or password"
       erb :login
     end
 

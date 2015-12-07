@@ -1,9 +1,18 @@
-<h1>Register</h1>
 
-<form action="/register" method="post">
-  <input type="text" name="user_name" placeholder="Your username">
-  <input type="text" name="user_email" placeholder="Your email address">
-  <input type="password" name="password" placeholder="Your password">
-  <input type="submit" value="Register!">
-  <input type="button" onclick="window.location.href='/'" value="Cancel">
+
+<form action="/register" class="forms" method="post">
+  <h1 id="items_head">Register</h1>
+  <div class="form-field">
+    <input type="text" name="user_name" placeholder="Your username">
+  </div>
+  <div class="form-field">
+    <input type="text" name="user_email" placeholder="Your email address">
+  </div>
+  <div class="form-field">
+    <input type="password" name="password" placeholder="Your password">
+  </div>
+  <div class="form-field">
+    <input type="submit" id="loginbtn" value="Register!">
+    <input type="button" class="cancelbtn" onclick="window.location.href='/'" value="Cancel">
+  </div>
 </form>

@@ -1,4 +1,7 @@
-<h1><%= @message %></h1>
-
-<input type="button" onclick="window.location.href='/'" value="Home">
-<input type="button" onclick="window.location.href='/logout'" value="Logout">
+<h1 id="items_head"><%= @message %></h1>
+<div class="forms">
+  <div class="form-field">
+    <input type="button" id="loginbtn" onclick="window.location.href='/'" value="Home">
+    <input type="button" class="logoutbtn" onclick="window.location.href='/logout'" value="Logout">
+  </div>
+</div>

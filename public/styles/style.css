@@ -1,3 +1,51 @@
+html {
+  background-color: #dddfd4;
+  background: url("http://d1ow492s4ccivt.cloudfront.net/wp-content/uploads/2013/09/UMG_Web_CROP_FINAL_Frank_Sinatra1.jpg") no-repeat left fixed;
+  background-size: cover;
+}
+/* http://static1.squarespace.com/static/545909d9e4b0d2b74117bc7c/5462a541e4b011fe1093ad82/5462a544e4b011fe1093ad83/1415750982435/hor-franksinatra_frank_sinatra_4.jpg?format=2500w */
+/* http://d1ow492s4ccivt.cloudfront.net/wp-content/uploads/2013/09/UMG_Web_CROP_FINAL_Frank_Sinatra1.jpg */
+@font-face {
+  font-family: 'Rocket Script';
+  src: url('/styles/RocketScript.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+body {
+  font-family: "Rocket Script", Helvetica, sans-serif;
+  height: 100%;
+}
+
+input {
+  height: 38px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+}
+
+input[type="button"], [type="submit"] {
+  cursor: pointer;
+  letter-spacing: .1rem;
+  color: white;
+  height: 38px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0 30px;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+#updatebtn {
+  background-color: #3fb0ac;
+}
+
+#removebtn {
+  background-color: #fae596;
+}
+
 table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -8,12 +56,12 @@ th, td {
   padding: 10px 15px;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f0f0f2;
+tbody tr {
+  background-color: rgba(255, 255, 255, 0.5);;
 }
 
 thead {
-  background-color: rgb(82, 255, 241);
+  background-color: #173e43;
   color: #fff;
 }
 
@@ -22,8 +70,8 @@ thead {
 }
 
 tfoot tr {
-  background-color: rgb(82, 255, 241);
-  border-bottom: none;
+  background-color: #173e43;
+  border-bottom: 0;
 }
 
 th:first-child {
@@ -44,8 +92,86 @@ tfoot tr:last-child td:last-child {
 
 #items_head {
   text-align: center;
+  color: #fae596;
 }
 
 #add_anchor {
   margin-left: 35%;
+  background-color: #3fb0ac;
+}
+
+#homebtn {
+  background-color: #173e43;
+}
+
+.logoutbtn {
+  background-color: #fae596;
+}
+
+.headmsg {
+  margin: 0 auto;
+  width: 620px;
+  text-align: center;
+}
+
+.forms {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.form-field {
+  margin: 6%;
+}
+
+input[type="text"], [type="password"] {
+  width: 100%;
+  padding: 6px 10px;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 1px solid #d1d1d1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;
+}
+
+:-ms-input-placeholder {
+   color: #fff;
+}
+
+.form-field #add_anchor {
+  margin-left: 0
+}
+
+.homemsg {
+  color: #3fb0ac;
+  color: #fae596;
+  font-weight: 600;
+}
+
+#loginbtn {
+  background-color: #3fb0ac;
+}
+
+#itemsbtn, .cancelbtn {
+  background-color: #173e43;
+}
+
+.headmsg p {
+  color: #3fb0ac;
+}
+
+.invalid {
+  color: red;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }

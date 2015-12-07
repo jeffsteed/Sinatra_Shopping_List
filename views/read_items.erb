@@ -1,4 +1,4 @@
-<input type="button" onclick="window.location.href='/logout'" value="Logout"><h1 id="items_head">Items</h1>
+<input type="button" class="logoutbtn" onclick="window.location.href='/logout'" value="Logout"><h1 id="items_head">Items</h1>
 
 
 <table>
@@ -28,10 +28,10 @@
           <%= item.qty %>
         </td>
         <td>
-          <input type="button" onclick="window.location.href='items/update/<%= item.id %>'" value="Update">
+          <input type="button" id="updatebtn" onclick="window.location.href='items/update/<%= item.id %>'" value="Update">
         </td>
         <td>
-          <input type="button" onclick="window.location.href='items/destroy/<%= item.id %>'" value="Remove">
+          <input type="button" id="removebtn" onclick="window.location.href='items/destroy/<%= item.id %>'" value="Remove">
         </td>
       </tr>
 
@@ -51,4 +51,4 @@
 <br>
 
 <input type="button" id="add_anchor" onclick="window.location.href='/items/create'" value="Add Item">
-<input type="button" onclick="window.location.href='/'" value="Home">
+<input type="button" id="homebtn" onclick="window.location.href='/'" value="Home">
